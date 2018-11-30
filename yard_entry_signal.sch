@@ -1,0 +1,364 @@
+EESchema Schematic File Version 4
+LIBS:power_module-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:LED D4
+U 1 1 5B8C731F
+P 7200 4850
+F 0 "D4" H 7191 5066 50  0000 C CNN
+F 1 "Green" H 7191 4975 50  0000 C CNN
+F 2 "dakota_footprints:LED_1206_HandSolder_Marked" H 7200 4850 50  0001 C CNN
+F 3 "~" H 7200 4850 50  0001 C CNN
+F 4 "732-5033-1-ND" H 0   0   50  0001 C CNN "Digikey"
+	1    7200 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5B8C737A
+P 7200 4450
+F 0 "D3" H 7191 4666 50  0000 C CNN
+F 1 "Yellow" H 7191 4575 50  0000 C CNN
+F 2 "dakota_footprints:LED_1206_HandSolder_Marked" H 7200 4450 50  0001 C CNN
+F 3 "~" H 7200 4450 50  0001 C CNN
+F 4 "732-5034-1-ND" H 0   0   50  0001 C CNN "Digikey"
+	1    7200 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5B8C73C4
+P 7200 4050
+F 0 "D2" H 7191 4266 50  0000 C CNN
+F 1 "Red" H 7191 4175 50  0000 C CNN
+F 2 "dakota_footprints:LED_1206_HandSolder_Marked" H 7200 4050 50  0001 C CNN
+F 3 "~" H 7200 4050 50  0001 C CNN
+F 4 "732-5031-1-ND" H 0   0   50  0001 C CNN "Digikey"
+	1    7200 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R4
+U 1 1 5B8C7455
+P 7650 4850
+F 0 "R4" V 7445 4850 50  0000 C CNN
+F 1 "390" V 7536 4850 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7690 4840 50  0001 C CNN
+F 3 "~" H 7650 4850 50  0001 C CNN
+F 4 "P390ECT-ND" H 0   0   50  0001 C CNN "Digikey"
+	1    7650 4850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R3
+U 1 1 5B8C74C0
+P 7650 4450
+F 0 "R3" V 7445 4450 50  0000 C CNN
+F 1 "390" V 7536 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7690 4440 50  0001 C CNN
+F 3 "~" H 7650 4450 50  0001 C CNN
+F 4 "P390ECT-ND" H 0   0   50  0001 C CNN "Digikey"
+	1    7650 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 5B8C74EE
+P 7650 4050
+F 0 "R2" V 7445 4050 50  0000 C CNN
+F 1 "390" V 7536 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7690 4040 50  0001 C CNN
+F 3 "~" H 7650 4050 50  0001 C CNN
+F 4 "P390ECT-ND" H 0   0   50  0001 C CNN "Digikey"
+	1    7650 4050
+	0    -1   -1   0   
+$EndComp
+$Sheet
+S 8200 4800 700  750 
+U 5B8CA058
+F0 "Yard Signal Jack" 50
+F1 "yard_signal_jack.sch" 50
+F2 "Red_Drain" I L 8200 4950 50 
+F3 "Yellow_Drain" I L 8200 5100 50 
+F4 "Green_Drain" I L 8200 5250 50 
+F5 "Buzzer" I L 8200 5400 50 
+$EndSheet
+Wire Wire Line
+	8200 4950 8100 4950
+Wire Wire Line
+	8100 4950 8100 4050
+Wire Wire Line
+	8100 4050 7800 4050
+Wire Wire Line
+	8200 5100 8050 5100
+Wire Wire Line
+	8050 5100 8050 4450
+Wire Wire Line
+	8050 4450 7800 4450
+Wire Wire Line
+	8200 5250 8000 5250
+Wire Wire Line
+	8000 5250 8000 4850
+Wire Wire Line
+	8000 4850 7800 4850
+Wire Wire Line
+	7500 4850 7350 4850
+Wire Wire Line
+	7500 4450 7350 4450
+Wire Wire Line
+	7500 4050 7350 4050
+Text Notes 8150 5950 0    50   ~ 0
+Controller LEDs and Mast LEDs are in series.\nThis is hopefully fine.
+$Comp
+L power:+5V #PWR0101
+U 1 1 5B8CD5FC
+P 6300 6150
+F 0 "#PWR0101" H 6300 6000 50  0001 C CNN
+F 1 "+5V" V 6315 6278 50  0000 L CNN
+F 2 "" H 6300 6150 50  0001 C CNN
+F 3 "" H 6300 6150 50  0001 C CNN
+	1    6300 6150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7900 5200 7900 5400
+Wire Wire Line
+	7900 5400 8200 5400
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5B8DB394
+P 6050 5700
+F 0 "SW1" H 6050 5985 50  0000 C CNN
+F 1 "UsrBtn" H 6050 5894 50  0000 C CNN
+F 2 "Button_Switch_THT:Push_E-Switch_KS01Q01" H 6050 5900 50  0001 C CNN
+F 3 "" H 6050 5900 50  0001 C CNN
+F 4 "EG4793-ND" H 6150 5600 50  0000 C CNN "Digikey"
+	1    6050 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 5B8E0EAD
+P 6100 6150
+F 0 "R1" V 5895 6150 50  0000 C CNN
+F 1 "10k" V 5986 6150 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6140 6140 50  0001 C CNN
+F 3 "~" H 6100 6150 50  0001 C CNN
+F 4 "1276-5930-1-ND" H 0   0   50  0001 C CNN "Digikey"
+	1    6100 6150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6300 6150 6250 6150
+$Comp
+L power:GND #PWR0102
+U 1 1 5B8E341B
+P 6700 5700
+F 0 "#PWR0102" H 6700 5450 50  0001 C CNN
+F 1 "GND" V 6705 5572 50  0000 R CNN
+F 2 "" H 6700 5700 50  0001 C CNN
+F 3 "" H 6700 5700 50  0001 C CNN
+	1    6700 5700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5700 5700 5850 5700
+Wire Wire Line
+	5700 6150 5700 5700
+Text Notes 5100 6300 0    50   ~ 0
+Push button clears signal.
+$Sheet
+S 3100 4500 1300 1400
+U 5B90716E
+F0 "ATTiny44A" 50
+F1 "attiny44a.sch" 50
+F2 "RESET_PB3" I L 3100 4800 50 
+F3 "SPI_SCL_PA4" I L 3100 5700 50 
+F4 "SPI_MISO_PA5" I L 3100 5550 50 
+F5 "SPI_MOSI_PA6" I L 3100 5400 50 
+F6 "PA7" I R 4400 5100 50 
+F7 "PA3" I R 4400 5250 50 
+F8 "PA2" I R 4400 5400 50 
+F9 "PA1" I R 4400 5550 50 
+F10 "PA0" I R 4400 5700 50 
+F11 "CLKI_PB0" I L 3100 5250 50 
+F12 "PB1" I L 3100 5100 50 
+F13 "CKOUT_PB2" I L 3100 4950 50 
+$EndSheet
+Wire Wire Line
+	4400 5100 5250 5100
+Wire Wire Line
+	5250 5100 5250 4050
+Wire Wire Line
+	7050 4450 5350 4450
+Wire Wire Line
+	5350 4450 5350 5250
+Wire Wire Line
+	5350 5250 4400 5250
+Wire Wire Line
+	4400 5400 5450 5400
+Wire Wire Line
+	5450 5400 5450 4850
+Wire Wire Line
+	7900 5200 5650 5200
+Wire Wire Line
+	5650 5200 5650 5550
+Wire Wire Line
+	5650 5550 4400 5550
+Wire Wire Line
+	6250 5700 6700 5700
+Wire Wire Line
+	5700 6150 5950 6150
+Wire Wire Line
+	5250 4050 7050 4050
+Wire Wire Line
+	5450 4850 7050 4850
+Wire Wire Line
+	5700 5700 4400 5700
+Connection ~ 5700 5700
+$Comp
+L power:GND #PWR0103
+U 1 1 5B90FFF2
+P 2400 5250
+F 0 "#PWR0103" H 2400 5000 50  0001 C CNN
+F 1 "GND" V 2405 5122 50  0000 R CNN
+F 2 "" H 2400 5250 50  0001 C CNN
+F 3 "" H 2400 5250 50  0001 C CNN
+	1    2400 5250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 5250 3000 5250
+Wire Wire Line
+	3100 5100 3000 5100
+Wire Wire Line
+	3000 5100 3000 5250
+Connection ~ 3000 5250
+Wire Wire Line
+	3000 5250 2900 5250
+Wire Wire Line
+	3100 4950 2900 4950
+Wire Wire Line
+	2900 4950 2900 5250
+Connection ~ 2900 5250
+Wire Wire Line
+	2900 5250 2400 5250
+$Comp
+L power:GND #PWR0104
+U 1 1 5B91CB91
+P 2500 2250
+F 0 "#PWR0104" H 2500 2000 50  0001 C CNN
+F 1 "GND" H 2505 2077 50  0000 C CNN
+F 2 "" H 2500 2250 50  0001 C CNN
+F 3 "" H 2500 2250 50  0001 C CNN
+	1    2500 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2200 2500 2200
+Wire Wire Line
+	2500 2200 2500 2250
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5B91CBCC
+P 1600 2200
+F 0 "J1" H 1520 1875 50  0000 C CNN
+F 1 "Conn_01x02" H 1520 1966 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal" H 1600 2200 50  0001 C CNN
+F 3 "~" H 1600 2200 50  0001 C CNN
+F 4 "277-1667-ND" H 0   0   50  0001 C CNN "Digikey"
+	1    1600 2200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Bridge_+-AA D1
+U 1 1 5B91CC33
+P 2950 2200
+F 0 "D1" H 3291 2246 50  0000 L CNN
+F 1 "Rect" H 3291 2155 50  0000 L CNN
+F 2 "dakota_footprints:MBS" H 3100 2325 50  0001 L CNN
+F 3 "http://www.vishay.com/docs/88661/mb2s.pdf" H 2950 2200 50  0001 C CNN
+F 4 "SMC KMB245STR" H 3400 2050 50  0000 C CNN "Digikey"
+	1    2950 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 2200 1800 1800
+Wire Wire Line
+	2950 1800 2950 1900
+Wire Wire Line
+	1800 2300 1950 2300
+Wire Wire Line
+	1950 2300 1950 2700
+Wire Wire Line
+	1950 2700 2950 2700
+Wire Wire Line
+	2950 2700 2950 2500
+Text Label 2350 1800 2    50   ~ 0
+AC_PWR_2
+Text Label 2200 2700 0    50   ~ 0
+AC_PWR_1
+Wire Wire Line
+	1800 1800 2950 1800
+$Comp
+L dakota_symbols:eboot_regulator U1
+U 1 1 5B9378C3
+P 4900 1950
+F 0 "U1" H 4875 2065 50  0000 C CNN
+F 1 "eboot_regulator" H 4875 1974 50  0000 C CNN
+F 2 "dakota_footprints:eboot_regulator" H 4850 1350 50  0001 C CNN
+F 3 "" H 4900 1950 50  0001 C CNN
+	1    4900 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2200 3250 2100
+Wire Wire Line
+	3250 2100 4450 2100
+$Comp
+L power:GND #PWR0105
+U 1 1 5B9388F2
+P 4450 2300
+F 0 "#PWR0105" H 4450 2050 50  0001 C CNN
+F 1 "GND" H 4455 2127 50  0000 C CNN
+F 2 "" H 4450 2300 50  0001 C CNN
+F 3 "" H 4450 2300 50  0001 C CNN
+	1    4450 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5B938913
+P 5300 2300
+F 0 "#PWR0106" H 5300 2050 50  0001 C CNN
+F 1 "GND" H 5305 2127 50  0000 C CNN
+F 2 "" H 5300 2300 50  0001 C CNN
+F 3 "" H 5300 2300 50  0001 C CNN
+	1    5300 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 5B9389B8
+P 5300 2100
+F 0 "#PWR0107" H 5300 1950 50  0001 C CNN
+F 1 "+5V" V 5315 2228 50  0000 L CNN
+F 2 "" H 5300 2100 50  0001 C CNN
+F 3 "" H 5300 2100 50  0001 C CNN
+	1    5300 2100
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC
