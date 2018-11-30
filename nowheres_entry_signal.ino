@@ -1,9 +1,9 @@
-#define SIGNAL_RED_PIN 2
-#define SIGNAL_YELLOW_PIN 3
-#define SIGNAL_GREEN_PIN 4
-#define BUZZER_PIN 5
-#define BUTTON_PIN 6
-#define LED_L_PIN 13
+#define SIGNAL_RED_PIN 7  // PA7, Tiny 6
+#define SIGNAL_YELLOW_PIN 3  // PA3, Tiny 10
+#define SIGNAL_GREEN_PIN 2  // PA2, Tiny 11
+#define BUZZER_PIN 1  // Tiny 12
+#define BUTTON_PIN 0 // PA0, Tiny 13
+// #define LED_L_PIN 13
 
 #define GREEN_TIME_MS 25000
 #define YELLOW_TIME_MS 0  // disabled for now
@@ -51,7 +51,7 @@ void setup() {
   pinMode(SIGNAL_GREEN_PIN, OUTPUT);
   pinMode(BUZZER_PIN, OUTPUT);
   pinMode(BUTTON_PIN, INPUT_PULLUP);
-  pinMode(LED_L_PIN, OUTPUT);
+  // pinMode(LED_L_PIN, OUTPUT);
 
   SetSignal(SIGNAL_RED_PIN);
 }
@@ -60,10 +60,10 @@ void loop() {
   unsigned long now_ms = millis();
   if (digitalRead(BUTTON_PIN) == LOW) { // active
     buttonPressedMs = now_ms;
-    digitalWrite(LED_L_PIN, HIGH);
+    // digitalWrite(LED_L_PIN, HIGH);
     SetSignal(SIGNAL_GREEN_PIN);
   } else {
-    digitalWrite(LED_L_PIN, LOW);
+    // digitalWrite(LED_L_PIN, LOW);
   }
 
   PokeBuzzer(now_ms);
